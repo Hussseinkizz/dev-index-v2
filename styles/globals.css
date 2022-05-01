@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* my custom css */
+@media (min-width: 768px) {
+  ._show-on-md {
+    display: flex;
+  }
+  ._not-fixed-on-md {
+    position: relative;
+    z-index: auto;
+  }
+}
+
+/* only for mobile */
+@media (max-width: 768px) {
+  ._fixed-on-mobile {
+    position: fixed; /* fixed */
+    z-index: 50; /* z-50 */
+  }
+  ._fixed-on-mobile + main {
+    padding-top: 6rem; /* pt-24 */
+  }
+}
