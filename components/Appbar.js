@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 // import { useStore } from '../store/store';
 import * as BsIcons from 'react-icons/bs';
 import * as HiIcons from 'react-icons/hi';
@@ -23,18 +23,22 @@ const Appbar = ({ toggleNav, closeNav, navState }) => {
   return (
     <header className="bg-blue-500 text-white shadow-md w-full _fixed-on-mobile">
       <nav className="flex items-center justify-between px-4 py-2 ">
-        <a href="/" className="hover:text-blue-100 transition-colors">
-          {/* Nav Left, for brand */}
-          <div className="flex items-center justify-between gap-2">
-            <span>
-              <BsIcons.BsBookmarkFill className="text-xl" />
-            </span>
-            <div className="font-bold font-mono text-xl">
-              Dev Index{' '}
-              <span className="text-blue-300 bg-blue-400 px-1 rounded">v2</span>
+        <Link to="/" passHref>
+          <a className="hover:text-blue-100 transition-colors">
+            {/* Nav Left, for brand */}
+            <div className="flex items-center justify-between gap-2">
+              <span>
+                <BsIcons.BsBookmarkFill className="text-xl" />
+              </span>
+              <div className="font-bold font-mono text-xl">
+                Dev Index
+                <span className="text-blue-300 bg-blue-400 px-1 rounded">
+                  v2
+                </span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </Link>
         {/* Nav Middle, for search */}
         {/* <div className="foo">
           <input
