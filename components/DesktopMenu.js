@@ -10,9 +10,9 @@ const DesktopMenu = () => {
           className="flex space-x-2 place-items-center hover:text-blue-100 transition-colors"
           target="_blank"
         >
-          <span>
+          {/* <span>
             <HiIcons.HiHome />
-          </span>
+          </span> */}
           <span>Home</span>
         </a>
       </Link>
@@ -21,9 +21,9 @@ const DesktopMenu = () => {
           className="flex space-x-2 place-items-center hover:text-blue-100 transition-colors"
           target="_blank"
         >
-          <span>
+          {/* <span>
             <HiIcons.HiMail />
-          </span>
+          </span> */}
           <span>Contact Us</span>
         </a>
       </Link>
@@ -32,9 +32,9 @@ const DesktopMenu = () => {
           className="flex space-x-2 place-items-center hover:text-blue-100 transition-colors"
           target="_blank"
         >
-          <span>
+          {/* <span>
             <IoIcons.IoLogoTwitter />
-          </span>
+          </span> */}
           <span>Follow Creator</span>
         </a>
       </Link>

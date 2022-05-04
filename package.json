@@ -14,6 +14,8 @@
     "@headlessui/react": "^1.5.0",
     "@hookform/resolvers": "^2.8.8",
     "@iconscout/react-unicons": "^1.1.6",
+    "@supabase/supabase-js": "^1.35.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "next": "12.1.5",
