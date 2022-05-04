@@ -7,7 +7,7 @@ import CategoriesFilter from '../components/CategoriesFilter';
 import localData from '../store/data';
 
 export default function Home({ fetchedData }) {
-  let useData = localData; // fetchedData
+  let useData = fetchedData; // localData;
 
   // Todo: modify the incoming data
   // 1. get categories from each item  and form an array
@@ -17,8 +17,16 @@ export default function Home({ fetchedData }) {
   const sortedCategories = () => {
     const categories = useData.map((item) => item.category);
     const uniqueCategories = [...new Set(categories)];
-    // const modifiedUniqueCategories = uniqueCategories.slice(0, 0, 'everything');
-    const modifiedUniqueCategories = [...uniqueCategories, 'everything'];
+    // const modifiedUniqueCategories = uniqueCategories.splice(
+    //   0,
+    //   0,
+    //   'everything'
+    // );
+    const modifiedUniqueCategories = [
+      ...uniqueCategories,
+      'everything',
+    ].reverse();
+    // console.log(modifiedUniqueCategories);
     return modifiedUniqueCategories;
   };
   // console.log(sortedCategories());
