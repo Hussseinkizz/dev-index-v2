@@ -32,7 +32,7 @@ const Appbar = ({ toggleNav, closeNav, navState }) => {
               </span>
               <div className="font-bold font-mono text-xl">
                 Dev Index
-                <span className="text-blue-300 bg-blue-400 px-1 rounded">
+                <span className="text-blue-300 bg-blue-400 px-1 mx-2 rounded">
                   v2
                 </span>
               </div>
