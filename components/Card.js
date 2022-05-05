@@ -3,6 +3,7 @@ import { Zoom } from 'react-reveal';
 import Image from 'next/image';
 import * as BsIcons from 'react-icons/bs';
 import usePreview from '../hooks/usePreview';
+import Link from 'next/link';
 
 const Card = ({ tool }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -32,42 +33,46 @@ const Card = ({ tool }) => {
     <Zoom>
       <div className="flex-col shadow-md bg-gray-50 border border-gray-200 rounded-md">
         {/* Card Body */}
-        <a href={url} className="group">
-          <div className="aspect-w-1 aspect-h-1 xl:aspect-h-8 w-full overflow-hidden aspect-auto">
-            <div className="w-full">
-              <Image
-                src={image}
-                layout="responsive"
-                loading="lazy"
-                height={35}
-                width={50}
-                objectFit="fill"
-                alt={`Screenshot of ${name}`}
-                title={name}
-                className={`group-hover:opacity-75 rounded-t-md ${
-                  imageIsLoading
-                    ? 'grayscale blur-2xl'
-                    : 'grayscale-0 blur-0 transition-all duration-300 ease-in-out'
-                }`}
-                onLoadingComplete={() => setImageIsLoading(false)}
-              />
-            </div>
-            <div className="px-4">
-              <div className="flex justify-between items-center my-2">
-                <h3 className="text-gray-700 font-medium capitalize">{name}</h3>
-                <h2 className="px-2 py-1 rounded-md border border-gray-200 uppercase font-mono font-semibold text-sm truncate">
-                  {category}
-                </h2>
+        <Link href={url} passHref>
+          <a className="group" target="_blank">
+            <div className="aspect-w-1 aspect-h-1 xl:aspect-h-8 w-full overflow-hidden aspect-auto">
+              <div className="w-full">
+                <Image
+                  src={image}
+                  layout="responsive"
+                  loading="lazy"
+                  height={35}
+                  width={50}
+                  objectFit="fill"
+                  alt={`Screenshot of ${name}`}
+                  title={name}
+                  className={`group-hover:opacity-75 rounded-t-md ${
+                    imageIsLoading
+                      ? 'grayscale blur-3xl'
+                      : 'grayscale-0 blur-0 transition-all duration-300 ease-in-out'
+                  }`}
+                  onLoadingComplete={() => setImageIsLoading(false)}
+                />
               </div>
-              <p
-                className="mt-1 text-sm
+              <div className="px-4">
+                <div className="flex justify-between items-center my-2">
+                  <h3 className="text-gray-700 font-medium capitalize">
+                    {name}
+                  </h3>
+                  <h2 className="px-2 py-1 rounded-md border border-gray-200 uppercase font-mono font-semibold text-sm truncate">
+                    {category}
+                  </h2>
+                </div>
+                <p
+                  className="mt-1 text-sm
             text-gray-900 truncate"
-              >
-                {caption}
-              </p>
+                >
+                  {caption}
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </Link>
         {/* Card Footer */}
         <div className="flex p-4 justify-between items-center">
           <div className="flex gap-2 justify-between items-center">
