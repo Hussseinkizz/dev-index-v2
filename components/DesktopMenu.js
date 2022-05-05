@@ -1,6 +1,6 @@
 import * as IoIcons from 'react-icons/io5';
 import * as HiIcons from 'react-icons/hi';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const DesktopMenu = () => {
   return (

@@ -23,7 +23,7 @@ const Appbar = ({ toggleNav, closeNav, navState }) => {
   return (
     <header className="bg-blue-500 text-white shadow-md w-full _fixed-on-mobile">
       <nav className="flex items-center justify-between px-4 py-2 ">
-        <Link to="/" passHref>
+        <Link href="/" passHref>
           <a className="hover:text-blue-100 transition-colors">
             {/* Nav Left, for brand */}
             <div className="flex items-center justify-between gap-2">

@@ -15,7 +15,7 @@ export default function Home({ fetchedData }) {
   // 3. inject the "everything" category as the first item
   // 4. return the array!
   const sortedCategories = () => {
-    const categories = useData.map((item) => item.category);
+    const categories = useData?.map((item) => item.category);
     const uniqueCategories = [...new Set(categories)];
     // const modifiedUniqueCategories = uniqueCategories.splice(
     //   0,
@@ -38,7 +38,7 @@ export default function Home({ fetchedData }) {
   } = useStore();
 
   // filteredData is the data filtered by the current category
-  let filteredData = useData.filter((item) => {
+  let filteredData = useData?.filter((item) => {
     return item.category === currentCategory;
   });
   // console.log(filteredData);
@@ -46,7 +46,7 @@ export default function Home({ fetchedData }) {
   // show this when user selects a category
   const filteredContent = (
     <CardsGrid>
-      {filteredData.map((tool) => (
+      {filteredData?.map((tool) => (
         <Card tool={tool} key={tool.id} />
       ))}
     </CardsGrid>
@@ -55,7 +55,7 @@ export default function Home({ fetchedData }) {
   // show this initally
   const unFilteredContent = (
     <CardsGrid>
-      {useData.map((tool) => (
+      {useData?.map((tool) => (
         <Card tool={tool} key={tool.id} />
       ))}
     </CardsGrid>
